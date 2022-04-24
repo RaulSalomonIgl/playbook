@@ -1,10 +1,23 @@
 //Crear un objeto que reciba parámetros
-const LaunchX = {
-    Mission: "Node JS",
-    Welcome: function Welcome(explorer) {
-        console.log(`${explorer}, bienvenido a la misión ${this.Mission}`)
+class LaunchX{
+    constructor(Explorer, Mission, Pet){
+        this.Explorer = Explorer
+        this.Mission = Mission
+        this.Pet = Pet
+    }
+
+    Welcome(){
+        console.log(`${this.Explorer}, bienvenido a la misión ${this.Mission}`)
+    }
+    
+    Woopa(){
+        console.log(`Hola ${this.Explorer}, yo soy ${this.Pet}!!!`)
     }
 }
 
+
 console.log(LaunchX)
-LaunchX.Welcome("Raul")
+
+const launchX = new LaunchX('Raúl','Node JS','Woopa')
+launchX.Welcome()
+launchX.Woopa()
