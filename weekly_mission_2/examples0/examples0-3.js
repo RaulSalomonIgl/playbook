@@ -1,7 +1,13 @@
 //Crear un objeto con propiedades diferentes
-const Ajolonauta = {
-    name: "Woopa",
-    mission: "Node JS"
-}
-
-console.log(`Ajolonauta: ${Ajolonauta.name}\nMission: ${Ajolonauta.mission}`)
+const LaunchX = {
+     mission: "Node JS",
+      pet: { 
+          name: "Woopa",
+           type: "Ajolonauta" 
+        } 
+    } 
+    
+console.log(LaunchX)
+console.log(`Bienvenido a ${LaunchX.mission}`)
+console.log(`${LaunchX["pet"]}`)
+console.log(`${LaunchX.pet.type}`)
