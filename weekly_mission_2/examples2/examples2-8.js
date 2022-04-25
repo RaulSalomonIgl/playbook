@@ -11,7 +11,3 @@ class Toolbox {
   // Si intentamos instanciar un objeto, no podremos llamar este método static
   //const toolbox = new Toolbox()
   //console.log(toolbox.getMostUsefulTools()) // is not a function
-  
-  /*
-  HERENCIA: Nos permite relacionar clases entre sí y rehusar sus componentes
-  */
