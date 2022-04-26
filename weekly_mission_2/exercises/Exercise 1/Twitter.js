@@ -19,6 +19,12 @@ const User = {
     }
 }
 
+console.log("User:")
+console.log("Sitio web: " + User.website)
+console.log(User.getNameAndTweets())
+console.log(User.getProfile())
+
+
 const trending_topic ={
     trend:[
         {
@@ -43,11 +49,6 @@ const trending_topic ={
         return this.trend.forEach(trends => console.log(trends))
     }
 }
-
-console.log("User:")
-console.log("Sitio web: " + User.website)
-console.log(User.getNameAndTweets())
-console.log(User.getProfile())
 
 console.log("Trending Topic:")
 console.log("Trends: " + trending_topic.trend.length)
