@@ -19,6 +19,37 @@ const User = {
     }
 }
 
+const trending_topic ={
+    trend:[
+        {
+            category: "Entretenimiento · Tendencia",
+            name: "#SpiderMan",
+            tweets: 10401,
+            relatedTopic: ["Universo Marvel"]
+        },
+        {
+            category: "Tendencia en México",
+            name: "Amazonas",
+            tweets: 5931,
+            relatedTopic: []
+        }
+    ],
+    trendsForYou: true,
+    location: false,
+    getConfiguration: function(){
+        return `Trends for you: ${this.trendsForYou} · Show content from this location: ${this.location}`
+    },
+    getTrends: function(){
+        return this.trend.forEach(trends => console.log(trends))
+    }
+}
+
+console.log("User:")
 console.log("Sitio web: " + User.website)
 console.log(User.getNameAndTweets())
 console.log(User.getProfile())
+
+console.log("Trending Topic:")
+console.log("Trends: " + trending_topic.trend.length)
+console.log(trending_topic.getConfiguration())
+console.log(trending_topic.getTrends())
