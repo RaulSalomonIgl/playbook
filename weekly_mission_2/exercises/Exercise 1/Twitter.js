@@ -28,16 +28,18 @@ console.log(User.getProfile())
 const trending_topic ={
     trend:[
         {
-            category: "Entretenimiento · Tendencia",
-            name: "#SpiderMan",
-            tweets: 10401,
-            relatedTopic: ["Universo Marvel"]
-        },
-        {
             category: "Tendencia en México",
             name: "Amazonas",
             tweets: 5931,
-            relatedTopic: []
+            description: "",
+            position: 21
+        },
+        {
+            category: "Música · Tendencia",
+            name: "Biza",
+            tweets: 61500,
+            description: "La edición 23 de las BZRP Sessions, la esperada colaboración de Bizarrap con Paulo Londra, está causando revuelo 🎶",
+            position: 23            
         }
     ],
     trendsForYou: true,
@@ -46,7 +48,7 @@ const trending_topic ={
         return `Trends for you: ${this.trendsForYou} · Show content from this location: ${this.location}`
     },
     getTrends: function(){
-        return this.trend.forEach(trends => console.log(trends))
+        return this.trend.forEach(trends => console.log(`${trends.position} · ${trends.category}\n${trends.name}\n${trends.tweets} Tweets\n`))
     }
 }
 
