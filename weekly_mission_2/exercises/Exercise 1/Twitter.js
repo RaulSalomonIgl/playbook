@@ -52,7 +52,25 @@ const trending_topic ={
     }
 }
 
-console.log("Trending Topic:")
+console.log("\n\nTrending Topic:")
 console.log("Trends: " + trending_topic.trend.length)
 console.log(trending_topic.getConfiguration())
 console.log(trending_topic.getTrends())
+
+
+const hashtag = {
+    name: "DíaNaranja",
+    tweets: 10605,
+    description: "🎗En el #DíaNaranja todas las mujeres del mundo nos manifestamos por un alto a la violencia y demandamos que sean garantizados todos nuestros derechos.",
+    getTweets: function(){
+        return this.tweets
+    },
+    getHashtag: function(){
+        console.log(`#${this.name}\n${this.description}\n${this.tweets} Tweets`)
+    }
+}
+
+console.log("\n\nHashtag:")
+console.log(`#${hashtag.name}: ${hashtag.description}\n`)
+console.log(hashtag.getTweets() + " Tweets\n")
+console.log(hashtag.getHashtag())
