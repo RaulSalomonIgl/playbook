@@ -78,3 +78,52 @@ console.log("Reacciones: " + post.getTotalReactions())
 post.getComments()
 console.log()
 post.getPost()
+
+const biography = {
+    user: "Raul Salomon",
+    presentation:"",
+    details: [
+        "Estudia en Universidad Autonoma de Nuevo Leon",
+        "Estudió en Cuauhtemoc",
+        "De Tierra Blanca, Veracruz-Llave, Mexico",
+        "116 seguidores"
+    ],
+    hobbies: [
+        "Arte",
+        "Animación",
+        "Programación",
+    ],
+    featured: [],
+    friends: [
+        "Explorer 1",
+        "Explorer 2",
+        "Explorer 3",
+        "Explorer 4",
+        "Explorer 5",
+    ],
+    importantEvents: [
+        [
+            "Empezó a estudiar en Universidad Autonoma de Nuevo Leon",
+            "30 de junio de 2019",
+            "Universidad"
+        ]
+    ],
+    getTotalFriends: function(){
+        return this.friends.length
+    },
+    getHobbies: function(){
+        this.hobbies.forEach(hobbie => console.log(hobbie + "\n"))
+    },
+    getBiography: function(){
+        console.log(`${this.user}\n Detalles:\n`)
+        this.details.forEach(element => console.log(element + "\n"))
+        console.log("\n Pasatiempos:\n")
+        this.getHobbies()
+        console.log("\n Amigos:" + this.getTotalFriends()) 
+        this.friends.forEach(friend => console.log(friend + "\n"))
+        console.log("\n Acontecimientos importantes:\n" )
+        this.importantEvents.forEach(event => console.log(event + "\n"))
+    }
+}
+
+biography.getBiography()
