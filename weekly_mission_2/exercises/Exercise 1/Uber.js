@@ -64,3 +64,28 @@ const profile ={
 }
 
 profile.getProfileInformation()
+
+const travel ={
+    user: "Raúl Arturo Salomon Iglesias",
+    driver: "Jose Luis",
+    date: "31/10/20 12:58 p. m.",
+    payment_method: "EFECTIVO",
+    amount: 227.49,
+    currency: "MXN",
+    status: "CONCLUDED",
+    drawbacks: [],
+    starting_point: "Punto A",
+    destination: "Punto B",
+    getTravelInformation: function(){
+        return `${this.date}   ${this.amount} ${this.currency}\n           ${this.payment_method}`
+    },
+    gettravelDetails: function(){
+        console.log(this.getTravelInformation() + "\n")
+        console.log(`·${this.starting_point}\n·${this.destination}\n`)
+        console.log(`Tu viaje con ${this.driver}`)
+        this.drawbacks.forEach(element => console.log(element))
+    }
+}
+
+console.log("Viajes: " + travel.getTravelInformation() + "\n\n")
+travel.gettravelDetails()
