@@ -13,9 +13,4 @@ $$
 
 #### Agregando pruebas
 
-Intalar libreria $npm install --save jest$
-
-$$
-
-
-$$
+Intalar libreria $npm install --save-dev jest$
