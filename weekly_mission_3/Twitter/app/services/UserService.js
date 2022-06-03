@@ -1,4 +1,4 @@
-const User = require('./../User')
+const User = require('../models/User')
 
 class UserService{
     static create(id, username, name){
