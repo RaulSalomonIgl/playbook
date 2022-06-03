@@ -12,6 +12,15 @@ class UserService{
     static updateUserUsername(oUser, newUsername){
         oUser.setUsername = newUsername
     }
+
+    static getAllUsernames(listUsers){
+        const listUsername = []
+
+        listUsers.forEach( (element) => { //Recorrer lista de usuerios
+            listUsername.push(element.username)
+        });
+        return listUsername
+    }
 }
 
 module.exports = UserService
